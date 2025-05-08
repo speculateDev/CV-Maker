@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.border-box {
+  width: 100%;
+  border-top: 3px solid #000;
+}
+
+.prev__container {
+  font-family: Arial, sans-serif;
+  color: var(--cl-text);
+  min-height: 100dvh;
+  max-width: 120rem;
+  min-width: 650px;
+  overflow-x: auto;
+  margin: 0 auto;
+  display: flex;
+  padding: 4rem 2rem;
+  gap: 6rem;
+}

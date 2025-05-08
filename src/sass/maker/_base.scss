@@ -1,0 +1,45 @@
+/* Reset styles */
+
+:root {
+  --cl-text: #101214;
+  --cl-text-secondary: #73808d;
+  --bg-color: #1f1f1f;
+  --inp-color: #2e2e2e;
+  --color-primary: oklch(80.8% 0.158 241.966);
+  --color-primary-light: hsl(224.3 76.3% 48%);
+  --color-border: #333;
+  --color-secondary: #3f7d58;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  // interpolate-size: allow-keywords;
+
+  border-top: 5px solid #111;
+  // font-size: 50%;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100dvh;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  @media (max-width: 970px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.maker__container {
+  min-height: 100vh;
+  min-width: 100%;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  background-color: var(--bg-color);
+}
+
+button {
+  outline: none;
+}

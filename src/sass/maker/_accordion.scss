@@ -1,0 +1,47 @@
+.accordion {
+  &__item {
+  }
+
+  &__trigger {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    color: inherit;
+    font-size: 3rem;
+    font-weight: 600;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    svg {
+      transition: all 0.3s ease;
+    }
+
+    svg.open {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 500px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease;
+
+    &.open {
+      height: auto;
+    }
+  }
+}

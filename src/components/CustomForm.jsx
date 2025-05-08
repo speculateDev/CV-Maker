@@ -6,8 +6,6 @@ import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 function CustomForm({ sectionData, section_id }) {
-  console.log(sectionData);
-
   const { dispatch, cvState } = useCv();
 
   const [tags, setTags] = useState(

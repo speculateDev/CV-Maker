@@ -60,8 +60,6 @@ function App() {
   const { cvState, dispatch } = useCv();
   const navigate = useNavigate();
 
-  console.log(cvState.customSections);
-
   function handlePreview(isGeneric) {
     if (isGeneric) dispatch({ type: "use_generic" });
     else dispatch({ type: "use_user" });

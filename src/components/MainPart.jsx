@@ -2,6 +2,7 @@ import { useCv } from "../context/CvContext";
 import Header from "./Header";
 import { genericData } from "../utils/constants";
 import { useEffect, useState } from "react";
+import { format } from "date-fns";
 
 function MainPart() {
   const { cvState } = useCv();
@@ -24,7 +25,11 @@ function MainPart() {
               <h2 className="section__h-1">{exp.jobTitle}</h2>
               <h3 className="section__h-2">{exp.companyName}</h3>
               <p className="section__h-3">
-                {exp.dateFrom} - {exp.dateTo}, {exp.city}
+                {format(new Date(exp.dateFrom), "MMM yyyy")} -{" "}
+                {exp.dateTo.toLowerCase() === "present"
+                  ? "Present"
+                  : format(new Date(exp.dateTo), "MMM yyyy")}
+                , {exp.city}
               </p>
               <p className="section__description">{exp.roleDescription}</p>
             </div>
@@ -41,7 +46,11 @@ function MainPart() {
               <h2 className="section__h-1">{edu.degree}</h2>
               <h3 className="section__h-2">{edu.schoolName}</h3>
               <p className="section__h-3">
-                {edu.dateFrom} - {edu.dateTo}, {edu.city}
+                {format(new Date(edu.dateFrom), "yyyy")} -{" "}
+                {edu.dateTo.toLowerCase() === "present"
+                  ? "Present"
+                  : format(new Date(edu.dateTo), "yyyy")}
+                , {edu.city}
               </p>
             </div>
           ))}

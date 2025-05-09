@@ -668,6 +668,10 @@ button {
   line-height: 1.4;
 }
 
+.relative {
+  position: relative;
+}
+
 .h-screen {
   min-height: 100vh;
 }
